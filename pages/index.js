@@ -237,28 +237,28 @@ export default function RedBookGenerator() {
                                 />
                                 
                                 <div 
-                                    className={`text-center py-6 cursor-pointer group ${images.length >= 5 ? 'opacity-50 cursor-not-allowed' : ''}`}
+                                    className={`text-center py-4 cursor-pointer group ${images.length >= 5 ? 'opacity-50 cursor-not-allowed' : ''}`}
                                     onClick={() => images.length < 5 && fileInputRef.current?.click()}
                                 >
-                                    <div className="relative inline-block mb-4">
-                                        <div className="bg-gradient-to-r from-xiaohongshu-primary to-xiaohongshu-secondary w-16 h-16 rounded-2xl flex items-center justify-center mx-auto shadow-lg group-hover:scale-110 transition-transform duration-300">
-                                            <Upload className="w-8 h-8 text-white" />
+                                    <div className="relative inline-block mb-3">
+                                        <div className="bg-gradient-to-r from-xiaohongshu-primary to-xiaohongshu-secondary w-12 h-12 rounded-xl flex items-center justify-center mx-auto shadow-lg group-hover:scale-110 transition-transform duration-300">
+                                            <Upload className="w-6 h-6 text-white" />
                                         </div>
-                                        <div className="absolute -top-1 -right-1 w-5 h-5 bg-xiaohongshu-accent rounded-full flex items-center justify-center animate-pulse">
-                                            <Camera className="w-3 h-3 text-white" />
+                                        <div className="absolute -top-1 -right-1 w-4 h-4 bg-xiaohongshu-accent rounded-full flex items-center justify-center animate-pulse">
+                                            <Camera className="w-2 h-2 text-white" />
                                         </div>
                                     </div>
-                                    <h2 className="text-xl font-bold text-xiaohongshu-dark mb-3">
+                                    <h2 className="text-lg font-bold text-xiaohongshu-dark mb-2">
                                         📸 上传你的美图 ({images.length}/5)
                                     </h2>
-                                    <p className="text-sm text-gray-600 mb-4 leading-relaxed max-w-md mx-auto">
+                                    <p className="text-xs text-gray-600 mb-3 leading-relaxed max-w-sm mx-auto">
                                         最多支持5张图片上传，拖拽或点击选择文件<br/>
                                         <span className="font-semibold text-xiaohongshu-primary">AI将智能分析图片内容，生成精彩文案</span>
                                     </p>
-                                    <div className="flex justify-center gap-2">
-                                        <Badge className="bg-gradient-to-r from-xiaohongshu-primary to-xiaohongshu-secondary text-white border-none px-3 py-1 text-sm">JPG</Badge>
-                                        <Badge className="bg-gradient-to-r from-xiaohongshu-secondary to-xiaohongshu-accent text-white border-none px-3 py-1 text-sm">PNG</Badge>
-                                        <Badge className="bg-gradient-to-r from-xiaohongshu-accent to-xiaohongshu-primary text-white border-none px-3 py-1 text-sm">WEBP</Badge>
+                                    <div className="flex justify-center gap-1">
+                                        <Badge className="bg-gradient-to-r from-xiaohongshu-primary to-xiaohongshu-secondary text-white border-none px-2 py-0.5 text-xs">JPG</Badge>
+                                        <Badge className="bg-gradient-to-r from-xiaohongshu-secondary to-xiaohongshu-accent text-white border-none px-2 py-0.5 text-xs">PNG</Badge>
+                                        <Badge className="bg-gradient-to-r from-xiaohongshu-accent to-xiaohongshu-primary text-white border-none px-2 py-0.5 text-xs">WEBP</Badge>
                                     </div>
                                 </div>
                             </div>
@@ -337,8 +337,8 @@ export default function RedBookGenerator() {
                                 </h3>
                             </CardHeader>
                             <CardContent className="pt-0">
-                                <div className="grid grid-cols-3 gap-2">
-                                    {styles.slice(0, 6).map((s) => (
+                                <div className="grid grid-cols-5 gap-2">
+                                    {styles.map((s) => (
                                         <button
                                             key={s.name}
                                             onClick={() => setStyle(s.name)}
